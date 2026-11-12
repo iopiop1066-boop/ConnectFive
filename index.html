@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오목</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>오목</h1>
+
+    <section class="controls">
+      <div class="row">
+        <label><input type="radio" name="mode" value="pvp"> 사람 vs 사람</label>
+        <label><input type="radio" name="mode" value="ai" checked> 사람 vs AI</label>
+      </div>
+      <div class="row ai-only">
+        <label>AI 수준
+          <select id="level">
+            <option value="1">1단계 (입문)</option>
+            <option value="2">2단계</option>
+            <option value="3" selected>3단계</option>
+            <option value="4">4단계</option>
+            <option value="5">5단계 (최강)</option>
+          </select>
+        </label>
+        <label>내 돌
+          <select id="side">
+            <option value="1" selected>흑 (선공)</option>
+            <option value="2">백 (후공)</option>
+          </select>
+        </label>
+      </div>
+      <button id="restart" type="button">새 게임</button>
+    </section>
+
+    <p id="status" role="status"></p>
+    <canvas id="board" width="600" height="600"></canvas>
+  </main>
+
+  <script src="core.js"></script>
+  <script src="ai.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
